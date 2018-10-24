@@ -8,18 +8,28 @@ class Person
 {
     protected:
         // instance variables here...
+        int urid;
+        std::string netid;
+        std::string lname;
+        std::string fname;
+        int dob_day;
+        int dob_month;
+        int dob_year;
+        std::string email;
+        std::string address;
+        long phone;
 
     public:
         Person();
         Person(const Person& other);
-        Person(int urid, std::string netid, std::string lname, std::string fname, 
+        Person(int urid, std::string netid, std::string lname, std::string fname,
                int dob_day, int dob_month, int dob_year,
                std::string email, std::string address, long phone);
         ~Person();
 
         std::string  getFirstName();
         std::string  getLastName();
-        struct tm    getDateOfBirth(); 
+        struct tm    getDateOfBirth();
             // see http://www.cplusplus.com/reference/ctime/tm/
         std::string  getAddress();
         std::string  getNetID();
