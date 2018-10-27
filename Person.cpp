@@ -24,12 +24,12 @@ Person::~Person(){}
 
 std::string Person::getFirstName()
 {
-  return "STUB"; //stub
+  return fname;
 }
 
 std::string Person::getLastName()
 {
-  return "STUB"; //stub
+  return lname;
 }
 
 struct tm Person::getDateOfBirth()
@@ -39,17 +39,17 @@ struct tm Person::getDateOfBirth()
 
 std::string Person::getAddress()
 {
-  return "STUB"; //stub
+  return address; //stub
 }
 
 std::string getNetId()
 {
-  return "STUB"; //stub
+  return ""; //stub
 }
 
 int Person::getURID()
 {
-  return -1; //stub
+  return urid; //stub
 }
 
 std::string Person::getEmail()
