@@ -1,11 +1,12 @@
-#include Student.h
-#include Person.h
+#include "Student.h"
+#include "Person.h"
 using namespace std;
 
 
 int main() {
-	Person p();
-	Student s();
+	Person p;
+	Student s;
+	
 	cout << "Person p; " << p << endl;
 
 	cout << "-------------------------------------------" << endl;
@@ -135,4 +136,5 @@ int main() {
 	cout << "-------------------------------------------" << endl;
 
 
+	 return 0;
 }
