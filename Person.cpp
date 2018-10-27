@@ -34,7 +34,7 @@ std::string Person::getLastName()
 
 struct tm Person::getDateOfBirth()
 {
-  return null; //stub
+
 }
 
 std::string Person::getAddress()
@@ -52,7 +52,7 @@ int Person::getURID()
   return -1; //stub
 }
 
-std::string Person::getEmail();
+std::string Person::getEmail()
 {
   return "STUB"; //stub
 }

@@ -3,37 +3,37 @@
 
 #include <string>
 #include <iostream>
-#include Person.h
-#include Student.h
+#include "Person.h"
+#include "Student.h"
 using namespace std;
 
-Student::Student(int urid, std::string netid, std::string lname, std::string fname, 
-	int dob_day, int dob_mo, int dob_yr, 
+Student::Student(int urid, std::string netid, std::string lname, std::string fname,
+	int dob_day, int dob_mo, int dob_yr,
 	std::string email, std::string address, long phone,
 	int day_admit, int month_admit, int year_admit,
-	School school, bool is_full_time, 
+	/*School school, */bool is_full_time,
 	double units_completed):Person() {
 
 }
 
 Student::~Student() {}
 
-string Student::getCourses() {
+std::list<std::string> Student::getCourses() {
 
-	return "";
+	return courses;
 }
 
-void Student::addCourses() {
+void Student::addCourse(std::string course) {
 
 }
 
-void Student::removeCourses() {
+void Student::removeCourse(std::string course) {
 
 }
 void Student::printCourses() {
 
 }
-void Student::setCourses() {
+void Student::setCourses(std::list<std::string> courses) {
 
 }
 
@@ -45,9 +45,9 @@ struct tm Student::getAdmitDate() {
 
 }
 
-School Student::getSchool() {
-
-}
+// School Student::getSchool() {
+//
+// }
 
 double Student::getGPA() {
 	return 0.0;
@@ -82,5 +82,3 @@ void Student::setFullTimeStatus(bool isFullTime) {
 }
 
 #endif
-
-
