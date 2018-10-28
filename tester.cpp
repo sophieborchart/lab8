@@ -1,15 +1,15 @@
 //#include "Student.h"
-//#include "Person.h"
+#include "Person.h"
 #include <iostream>
 using namespace std;
 
 
 int main() {
-	/*
+
 	Person p;
 	//Student s;
 
-	//cout << "Person p; " << p << endl;
+	cout << "Person p;" << endl;
 
 	cout << "-------------------------------------------" << endl;
 
@@ -20,54 +20,55 @@ int main() {
 	cout << "p.setFirstName(\"Sophie\")" << endl;
   p.setFirstName("Sophie");
 
-	cout << p.getFirstName() << "[Expected: Sophie]" << endl;
+	cout << p.getFirstName() << " [Expected: Sophie]" << endl;
 
 	cout << "-------------------------------------------" << endl;
 
 	p.setLastName("Borchart");
 	cout << "p.setLastName(\"Borchart\")" << endl;
-	cout << p.getLastName() << "[Expected: Borchart]" << endl;
+	cout << p.getLastName() << " [Expected: Borchart]" << endl;
 
 	cout << "-------------------------------------------" << endl;
 
-	cout << "p.setDateOfBirth(4, 7, (2018-1900))" << endl;
-	p.setDateOfBirth(4, 7, (1998-1900));
+	cout << "p.setDateOfBirth(4, 7, (1998-1900))" << endl;
+	p.setDateOfBirth(24, 7, (1998-1900));
 
-	cout << p.getDateOfBirth() << "[Expected: 4/7/1998]" << endl;
+	cout << p.getDateOfBirth().tm_mon << "/" << p.getDateOfBirth().tm_mday << "/"
+			 << p.getDateOfBirth().tm_year << " [Expected: 7/24/98]" << endl;
 
 	cout << "-------------------------------------------" << endl;
 
 	cout << "p.setAddress(\"28 Westhampton Way\")" << endl;
-	p.setAddress(\"28 Westhampton Way");
-	cout << p.getAddress() << "[Expected: 28 Westhampton Way]" << endl;
+	p.setAddress("28 Westhampton Way");
+	cout << p.getAddress() << " [Expected: 28 Westhampton Way]" << endl;
 
 	cout << "-------------------------------------------" << endl;
 
 	cout << "p.setNetID(\"sb3jm\")" << endl;
 	p.setNetID("sb3jm");
-	cout << p.getNetID() << "[Expected: sb3jm]" << endl;
+	cout << p.getNetID() << " [Expected: sb3jm]" << endl;
 
 	cout << "-------------------------------------------" << endl;
 
 	cout << "p.setURID(12345678)" << endl;
 	p.setURID(12345678);
-	cout << p.setURID() << "[Expected: 12345678]" << endl;
+	cout << p.getURID() << " [Expected: 12345678]" << endl;
 
 	cout << "-------------------------------------------" << endl;
 
 	cout << "p.setEmail(\"sophie.borchart@richmond.edu\")" << endl;
 	p.setEmail("sophie.borchart@richmond.edu");
-	cout << p.getEmail() << "[Expected: sophie.borchart@richmond.edu]" << endl;
+	cout << p.getEmail() << " [Expected: sophie.borchart@richmond.edu]" << endl;
 
 	cout << "-------------------------------------------" << endl;
 
 	cout << "p.setPhone(8478571058)" << endl;
 	p.setPhone(8478571058);
-	cout << p.getPhone() << "[Expected: 8478571058]" << endl;
+	cout << p.getPhone() << " [Expected: 8478571058]" << endl;
 
-	cout << "*******************************************" << endl;
+	cout << "-------------------------------------------" << endl;
 
-
+	/*
 	cout << "Student s; " << s << endl;
 
 	cout << "-------------------------------------------" << endl;
