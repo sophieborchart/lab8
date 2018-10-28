@@ -12,7 +12,22 @@ class Student : public Person
         enum School {AS, JSLS, LAW, RSB, SPCS, UNDEFINED};
 
     protected:
-        std::list<std::string> courses;
+        std::list<std::string> _courses;
+        double _gpa;
+        int urid;
+        std::string netid;
+        std::string lname;
+        std::string fname;
+        std::string email;
+        std::string address;
+        long phone;
+        int day_admit;
+        int month_admit;
+        int year_admit;
+        School _school;
+        bool is_full_time;
+        double units_completed;
+
 
     public:
         Student();                      // explicitly call Person() on implementation
@@ -21,7 +36,7 @@ class Student : public Person
                int dob_day, int dob_mo, int dob_yr,
                std::string email, std::string address, long phone,
                int day_admit, int month_admit, int year_admit,
-               /*School school, */bool is_full_time,
+               School school, bool is_full_time,
                double units_completed);
         ~Student();
 
@@ -33,7 +48,7 @@ class Student : public Person
         void                   clearCourses();
 
         struct tm              getAdmitDate();
-        // School                 getSchool();
+        School                 getSchool();
         double                 getGPA();
         double                 getUnitsCompleted();
         bool                   isFullTime();

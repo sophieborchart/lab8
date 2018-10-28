@@ -1,4 +1,4 @@
-//#include "Student.h"
+#include "Student.h"
 #include "Person.h"
 #include <iostream>
 using namespace std;
@@ -7,7 +7,7 @@ using namespace std;
 int main() {
 
 	Person p;
-	//Student s;
+	Student s;
 
 	cout << "Person p;" << endl;
 
@@ -68,8 +68,8 @@ int main() {
 
 	cout << "-------------------------------------------" << endl;
 
-	/*
-	cout << "Student s; " << s << endl;
+
+	cout << "Student s; " << endl;
 
 	cout << "-------------------------------------------" << endl;
 
@@ -80,10 +80,12 @@ int main() {
 	cout << "s.addCourse(\"CMSC 240\")" << endl;
 	cout << "s.addCourse(\"CMSC 222\")" << endl;
     s.addCourse("CMSC 240");
-    s.addCouurse("CMSC 222");
-	cout << s.getCourses() << "[Expected: CMSC 240, CMSC 222]" << endl;
+    s.addCourse("CMSC 222");
+	std::list<std::string> testCourses = s.getCourses();
+	s.printCourses();
+	cout << "[Expected: CMSC 240, CMSC 222]" << endl;
 
-	cout << "-------------------------------------------" << endl;
+/*	cout << "-------------------------------------------" << endl;
 
 	cout << "s.removeCourse(\"CMSC 240\")" << endl;
     s.removeCourse("CMSC 240");
