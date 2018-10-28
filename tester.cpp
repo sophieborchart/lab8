@@ -1,13 +1,15 @@
-#include "Student.h"
-#include "Person.h"
+//#include "Student.h"
+//#include "Person.h"
+#include <iostream>
 using namespace std;
 
 
 int main() {
+	/*
 	Person p;
-	Student s;
-	
-	cout << "Person p; " << p << endl;
+	//Student s;
+
+	//cout << "Person p; " << p << endl;
 
 	cout << "-------------------------------------------" << endl;
 
@@ -15,8 +17,9 @@ int main() {
 
 	cout << "-------------------------------------------" << endl;
 
-    cout << "p.setFirstName(\"Sophie\")" << endl;
-    p.setFirstName("Sophie");
+	cout << "p.setFirstName(\"Sophie\")" << endl;
+  p.setFirstName("Sophie");
+
 	cout << p.getFirstName() << "[Expected: Sophie]" << endl;
 
 	cout << "-------------------------------------------" << endl;
@@ -29,6 +32,7 @@ int main() {
 
 	cout << "p.setDateOfBirth(4, 7, (2018-1900))" << endl;
 	p.setDateOfBirth(4, 7, (1998-1900));
+
 	cout << p.getDateOfBirth() << "[Expected: 4/7/1998]" << endl;
 
 	cout << "-------------------------------------------" << endl;
@@ -134,7 +138,7 @@ int main() {
 	cout << s.getFullTimeStatus() << "[Expected: true]" << endl;
 
 	cout << "-------------------------------------------" << endl;
-
+*/
 
 	 return 0;
 }

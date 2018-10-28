@@ -63,7 +63,11 @@ std::string Person::getLastName()
 
 struct tm Person::getDateOfBirth()
 {
-
+  struct tm birthInformation;
+  birthInformation.tm_mday = dob_day;
+  birthInformation.tm_mon = dob_month;
+  birthInformation.tm_year = dob_year;
+  return birthInformation;
 }
 
 std::string Person::getAddress()
@@ -71,9 +75,9 @@ std::string Person::getAddress()
   return address;
 }
 
-std::string getNetID()
+std::string Person::getNetID()
 {
-  return ""; //STUB
+  return netid;
 }
 
 int Person::getURID()
