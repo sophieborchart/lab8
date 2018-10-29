@@ -7,6 +7,11 @@
 #include "Student.h"
 using namespace std;
 
+Student::Student()
+{
+
+}
+
 Student::Student(int urid, std::string netid, std::string lname, std::string fname,
 	int dob_day, int dob_mo, int dob_yr,
 	std::string email, std::string address, long phone,
@@ -69,9 +74,9 @@ bool Student::isFullTime() {
 }
 
 void Student::setAdmitDate(int day, int month, int year) {
-	day = day_admit;
-	month = month_admit;
-	year = year_admit;
+	day_admit = day;
+	month_admit = month;
+	year_admit = year;
 }
 
 void Student::setSchool(School school) {

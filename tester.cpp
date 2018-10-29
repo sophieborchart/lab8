@@ -34,7 +34,7 @@ int main() {
 	p.setDateOfBirth(24, 7, (1998-1900));
 
 	cout << p.getDateOfBirth().tm_mon << "/" << p.getDateOfBirth().tm_mday << "/"
-			 << p.getDateOfBirth().tm_year << " [Expected: 7/24/98]" << endl;
+			 << p.getDateOfBirth().tm_year + 1900 << " [Expected: 7/24/1998]" << endl;
 
 	cout << "-------------------------------------------" << endl;
 
@@ -85,11 +85,13 @@ int main() {
 	s.printCourses();
 	cout << "[Expected: CMSC 240, CMSC 222]" << endl;
 
-/*	cout << "-------------------------------------------" << endl;
+	cout << "-------------------------------------------" << endl;
 
 	cout << "s.removeCourse(\"CMSC 240\")" << endl;
     s.removeCourse("CMSC 240");
-	cout << s.getCourses() << "[Expected: CMSC 222]" << endl;
+		testCourses = s.getCourses();
+		s.printCourses();
+	cout << "[Expected: CMSC 222]" << endl;
 
 	cout << "-------------------------------------------" << endl;
 
@@ -101,21 +103,29 @@ int main() {
 	cout << "-------------------------------------------" << endl;
 
 	cout << "s.setCourses(\"CMSC 301, CMSC 315, MATH 245\")" << endl;
-    s.setCourses("CMSC 301, CMSC 315, MATH 245");
-	cout << s.getCourses() << "[Expected: CMSC 301, CMSC 315, MATH 245]" << endl;
+	std::list<std::string> test2Courses;
+		test2Courses.push_back("CMSC 301");
+		test2Courses.push_back("CMSC 315");
+		test2Courses.push_back("MATH 245");
+    s.setCourses(test2Courses);
+		s.printCourses();
+	cout << "[Expected: CMSC 301, CMSC 315, MATH 245]" << endl;
 
 	cout << "-------------------------------------------" << endl;
 
 	cout << "s.clearCourses()" << endl;
     s.clearCourses();
-	cout << s.clearCourses() << "[Expected: ]" << endl;
+		s.printCourses();
+		cout << endl;
+	cout << "[Expected: ]" << endl;
 
 	cout << "-------------------------------------------" << endl;
 
 	cout << "s.setAdmitDate(\"4/2/2017\")" << endl;
-    s.setAdmitDate("4/2/2017");
-	cout << s.getAdmitDate() << "[Expected: 4/2/2017]" << endl;
-
+    s.setAdmitDate(24, 2, 2017-1900);
+	cout << s.getAdmitDate().tm_mon << "/" << s.getAdmitDate().tm_mday << "/"
+			 << s.getAdmitDate().tm_year + 1900 << " [Expected: 4/2/2017]" << endl;
+/*
 	cout << "-------------------------------------------" << endl;
 
 	cout << "s.setSchool(University of Richmond)" << endl;
