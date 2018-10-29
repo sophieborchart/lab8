@@ -1,1 +1,1 @@
-Name: Sophie Borchart and Matthew Johnson
+Names: Sophie Borchart and Matthew Johnson

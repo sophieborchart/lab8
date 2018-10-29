@@ -1,3 +1,5 @@
+// Names: Sophie Borchart and Matthew Johnson
+
 #ifndef __PERSON_H__
 #define __PERSON_H__
 

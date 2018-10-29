@@ -1,3 +1,5 @@
+// Names: Sophie Borchart and Matthew Johnson
+
 #include "Student.h"
 #include "Person.h"
 #include <iostream>

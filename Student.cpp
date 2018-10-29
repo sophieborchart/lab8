@@ -1,3 +1,5 @@
+// Names: Sophie Borchart and Matthew Johnson
+
 #ifndef __STUDENT_CPP__
 #define __STUDENT_CPP__
 
