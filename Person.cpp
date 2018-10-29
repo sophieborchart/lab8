@@ -7,6 +7,7 @@
 
 Person::Person()
 {
+// default constructor for Person
   urid = -1;
   netid = "";
   lname = "";
@@ -20,6 +21,7 @@ Person::Person()
 }
 
 Person::Person(const Person& other)
+// constructor for Person which takes another Person as input
 {
   urid = other.urid;
   netid = other.netid;
@@ -37,6 +39,7 @@ Person::Person(int urid, std::string netid, std::string lname, std::string fname
        int dob_day, int dob_month, int dob_year,
        std::string email, std::string address, long phone)
 {
+// constructor for Person where the user inputs values for all instance variables
   this->urid = urid;
   this->netid = netid;
   this->lname = lname;
@@ -49,19 +52,23 @@ Person::Person(int urid, std::string netid, std::string lname, std::string fname
   this->phone = phone;
 }
 
+// destructor
 Person::~Person(){}
 
 std::string Person::getFirstName()
+// gets the first name
 {
   return fname;
 }
 
 std::string Person::getLastName()
+// gets the last name
 {
   return lname;
 }
 
 struct tm Person::getDateOfBirth()
+// gets the struct representing the date of birth
 {
   struct tm birthInformation;
   birthInformation.tm_mday = dob_day;
@@ -71,41 +78,49 @@ struct tm Person::getDateOfBirth()
 }
 
 std::string Person::getAddress()
+// gets the address
 {
   return address;
 }
 
 std::string Person::getNetID()
+// gets the netID
 {
   return netid;
 }
 
 int Person::getURID()
+// gets the UR ID
 {
   return urid;
 }
 
 std::string Person::getEmail()
+// gets the email
 {
   return email;
 }
 
 long Person::getPhone()
+// gets the phone number
 {
   return phone;
 }
 
 void Person::setFirstName(std::string fname)
+// setter method for the first name
 {
   this->fname = fname;
 }
 
 void Person::setLastName(std::string lname)
+// setter method for the last name
 {
   this->lname = lname;
 }
 
 void Person::setDateOfBirth(int day, int month, int year)
+// setter method for the last name
 {
   this->dob_day = day;
   this->dob_month = month;
@@ -113,26 +128,31 @@ void Person::setDateOfBirth(int day, int month, int year)
 }
 
 void Person::setAddress(std::string address)
+// setter method for the address
 {
   this->address = address;
 }
 
 void Person::setNetID(std::string netid)
+// setter method for the netID
 {
   this->netid = netid;
 }
 
 void Person::setURID(int urid)
+// setter method for the UR ID
 {
   this->urid = urid;
 }
 
 void Person::setEmail(std::string email)
+// setter method for the email
 {
   this->email = email;
 }
 
 void Person::setPhone(long number)
+// setter method for the phone number
 {
   this->phone = number;
 }
