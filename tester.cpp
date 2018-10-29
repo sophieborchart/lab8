@@ -125,33 +125,34 @@ int main() {
     s.setAdmitDate(24, 2, 2017-1900);
 	cout << s.getAdmitDate().tm_mon << "/" << s.getAdmitDate().tm_mday << "/"
 			 << s.getAdmitDate().tm_year + 1900 << " [Expected: 4/2/2017]" << endl;
-/*
+
 	cout << "-------------------------------------------" << endl;
 
 	cout << "s.setSchool(University of Richmond)" << endl;
-    s.setSchool(University of Richmond);
+	Student::School universityOfRichmond;
+    s.setSchool(universityOfRichmond);
 	cout << s.getSchool() << "[Expected: University of Richmond]" << endl;
 
 	cout << "-------------------------------------------" << endl;
 
+
 	cout << "s.setGPA(3.12)" << endl;
     s.setGPA(3.12);
-	cout << s.getGPA() << "[Expected: 3.12]" << endl;
+	cout << s.getGPA() << " [Expected: 3.12]" << endl;
 
 	cout << "-------------------------------------------" << endl;
 
 	cout << "s.setUnitsCompleted(18.0)" << endl;
-    s.setUnitsCompleted(18.0);
-	cout << s.getUnitsCompleted() << "[Expected: 18.0]" << endl;
+    s.setUnitsCompleted(18.2);
+	cout << s.getUnitsCompleted() << " [Expected: 18.2]" << endl;
 
 	cout << "-------------------------------------------" << endl;
 
 	cout << "s.setFullTimeStatus(true)" << endl;
     s.setFullTimeStatus(true);
-	cout << s.getFullTimeStatus() << "[Expected: true]" << endl;
+	cout << s.isFullTime() << " [Expected: 1]" << endl;
 
 	cout << "-------------------------------------------" << endl;
-*/
 
 	 return 0;
 }

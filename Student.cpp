@@ -35,21 +35,25 @@ void Student::removeCourse(std::string course) {
 	_courses.remove(course);
 }
 
-void Student::printCourses() {
+void Student::printCourses()
+{
 	std::list<std::string>::iterator it;
 	for(it = _courses.begin(); it != _courses.end(); ++it)
 		std::cout << *it << endl;
 }
 
-void Student::setCourses(std::list<std::string> courses) {
+void Student::setCourses(std::list<std::string> courses)
+{
 	_courses = courses;
 }
 
-void Student::clearCourses() {
+void Student::clearCourses()
+{
 	_courses.clear();
 }
 
-struct tm Student::getAdmitDate() {
+struct tm Student::getAdmitDate()
+{
 	struct tm admitInformation;
 	admitInformation.tm_mday = day_admit;
 	admitInformation.tm_mon = month_admit;
@@ -57,42 +61,50 @@ struct tm Student::getAdmitDate() {
 	return admitInformation;
 }
 
-Student::School Student::getSchool() {
+Student::School Student::getSchool()
+{
  	return _school;
 }
 
-double Student::getGPA() {
+double Student::getGPA()
+{
 	return _gpa;
 }
 
-double Student::getUnitsCompleted() {
+double Student::getUnitsCompleted()
+{
 	return units_completed;
 }
 
-bool Student::isFullTime() {
-	return true;
+bool Student::isFullTime()
+{
+	return is_full_time;
 }
 
-void Student::setAdmitDate(int day, int month, int year) {
+void Student::setAdmitDate(int day, int month, int year)
+{
 	day_admit = day;
 	month_admit = month;
 	year_admit = year;
 }
 
-void Student::setSchool(School school) {
+void Student::setSchool(School school)
+{
 	_school = school;
 }
 
-void Student::setGPA(double gpa) {
-	gpa = _gpa;
+void Student::setGPA(double gpa)
+{
+	_gpa = gpa;
 }
 
-void Student::setUnitsCompleted(double units) {
-	units = units_completed;
+void Student::setUnitsCompleted(double units)
+{
+	units_completed = units;
 }
 
 void Student::setFullTimeStatus(bool isFullTime) {
-	isFullTime = is_full_time;
+	is_full_time = isFullTime;
 }
 
 #endif

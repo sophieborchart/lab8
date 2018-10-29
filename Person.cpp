@@ -11,9 +11,9 @@ Person::Person()
   netid = "";
   lname = "";
   fname = "";
-  dob_day = -1;
-  dob_month = -1;
-  dob_year = -1;
+  dob_day = 0;
+  dob_month = 0;
+  dob_year = 0;
   email = "";
   address = "";
   phone = -1;
