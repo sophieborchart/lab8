@@ -44,8 +44,14 @@ int main() {
 	cout << p3.getPhone() << " [Expected: 911]" << endl;
 	cout << "-------------------------------------------" << endl;
 
-	Student s2(12345, "qwerty", "brown", "john", 4, 8, 1999, "x@x.com", "123 Maple Ln", 12345678,
-							1, 1, 2017, Student::AS, false, 23.5);
+	Student s2(12345, "qwerty", "Brown", "John", 4, 8, 1999-1900, "x@x.com", "123 Maple Ln", 12345678, 1, 1, 2017-1900, Student::AS, false, 23.5);
+	cout << "Student s2(12345, \"qwerty\", \"Brown\", \"John\", 4, 8, 1999-1900, \"x@x.com\", \123 Maple Ln\", 12345678, 1, 1, 2017-1900, Student::AS, false, 23.5)" << endl;
+	cout << s2.getAdmitDate().tm_mon << "/" << s2.getAdmitDate().tm_mday << "/"
+			 << s2.getAdmitDate().tm_year + 1900 << " [Expected: 1/1/2017]" << endl;
+  cout << s2.getSchool() << " [Expected: 0]" << endl;
+  cout << s2.getUnitsCompleted() << " [Expected: 23.5]" << endl;
+	cout << s2.getSchool() << " [Expected: 0]" << endl;
+	cout << s2.isFullTime() << " [Expected: 0]" << endl;
 
 	cout << "Testing Person setters/getters:" << endl;
 

@@ -9,7 +9,22 @@ using namespace std;
 
 Student::Student()
 {
-
+	urid = 12345;
+	netid = "";
+	lname = "";
+	fname = "";
+	dob_day = -1;
+	month_admit = -1;
+	dob_year = -1;
+	email = "";
+	address = "";
+	phone = -1;
+	day_admit = -1;
+	month_admit = -1;
+	year_admit = -1;
+	_school = Student::SPCS;
+	is_full_time = true;
+	units_completed = -1;
 }
 
 Student::Student(int urid, std::string netid, std::string lname, std::string fname,
@@ -19,7 +34,22 @@ Student::Student(int urid, std::string netid, std::string lname, std::string fna
 	School school, bool is_full_time,
 	double units_completed):Person()
 {
-
+	this->urid = urid;
+	this->netid = netid;
+	this->lname = lname;
+	this->fname = fname;
+	this->dob_day = dob_day;
+	this->dob_month = dob_mo;
+	this->dob_year = dob_yr;
+	this->email = email;
+	this->address = address;
+	this->phone = phone;
+	this->day_admit = day_admit;
+	this->month_admit = month_admit;
+	this->year_admit = year_admit;
+	this->_school = school;
+	this->is_full_time = is_full_time;
+	this->units_completed = units_completed;
 }
 
 Student::~Student() {}
