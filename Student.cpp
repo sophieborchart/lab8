@@ -7,6 +7,8 @@
 #include "Student.h"
 using namespace std;
 
+// default constructor for Student
+
 Student::Student()
 {
 	urid = 12345;
@@ -26,6 +28,8 @@ Student::Student()
 	is_full_time = true;
 	units_completed = -1;
 }
+
+// constructor for Person with instance variables as parameters
 
 Student::Student(int urid, std::string netid, std::string lname, std::string fname,
 	int dob_day, int dob_mo, int dob_yr,
@@ -52,23 +56,27 @@ Student::Student(int urid, std::string netid, std::string lname, std::string fna
 	this->units_completed = units_completed;
 }
 
+// destructor
 Student::~Student() {}
 
+// gets Student's _courses
 std::list<std::string> Student::getCourses()
 {
 	return _courses;
 }
-
+// adds Student's course
 void Student::addCourse(std::string course)
 {
 	_courses.push_back(course);
 }
 
+// removes Student's course
 void Student::removeCourse(std::string course)
 {
 	_courses.remove(course);
 }
 
+// prints Student's courses
 void Student::printCourses()
 {
 	std::list<std::string>::iterator it;
@@ -76,16 +84,18 @@ void Student::printCourses()
 		std::cout << *it << ", ";
 }
 
+// sets Student's courses
 void Student::setCourses(std::list<std::string> courses)
 {
 	_courses = courses;
 }
 
+// clears Student's courses
 void Student::clearCourses()
 {
 	_courses.clear();
 }
-
+ // struct representing Student's admit date information
 struct tm Student::getAdmitDate()
 {
 	struct tm admitInformation;
@@ -95,26 +105,30 @@ struct tm Student::getAdmitDate()
 	return admitInformation;
 }
 
+// gets Student's school
 Student::School Student::getSchool()
 {
  	return _school;
 }
-
+// gets Student's GPA
 double Student::getGPA()
 {
 	return _gpa;
 }
 
+// gets Student's units completed
 double Student::getUnitsCompleted()
 {
 	return units_completed;
 }
 
+// gets Student's full time status
 bool Student::isFullTime()
 {
 	return is_full_time;
 }
 
+// sets Student's admit date
 void Student::setAdmitDate(int day, int month, int year)
 {
 	day_admit = day;
@@ -122,21 +136,25 @@ void Student::setAdmitDate(int day, int month, int year)
 	year_admit = year;
 }
 
+// sets Student's school
 void Student::setSchool(School school)
 {
 	_school = school;
 }
 
+// sets Student's GPA
 void Student::setGPA(double gpa)
 {
 	_gpa = gpa;
 }
 
+// sets Student's units completed
 void Student::setUnitsCompleted(double units)
 {
 	units_completed = units;
 }
 
+// sets Student's full time status
 void Student::setFullTimeStatus(bool isFullTime) {
 	is_full_time = isFullTime;
 }

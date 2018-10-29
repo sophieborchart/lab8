@@ -12,24 +12,24 @@ class Student : public Person
         enum School {AS, JSLS, LAW, RSB, SPCS, UNDEFINED};
 
     protected:
-        std::list<std::string> _courses;
-        double _gpa;
-        int urid;
-        std::string netid;
-        std::string lname;
-        std::string fname;
-        std::string email;
-        std::string address;
-        long phone;
-        int day_admit;
-        int month_admit;
-        int year_admit;
-        School _school;
-        bool is_full_time;
-        double units_completed;
+        std::list<std::string> _courses;  // Student's courses
+        double _gpa;                      // Student's gpa
+        int urid;                         // Student's urid
+        std::string netid;                // Student's netid
+        std::string lname;                // Student's last name
+        std::string fname;                // Student's first name
+        std::string email;                // Student's email
+        std::string address;              // Student's address
+        long phone;                       // Student's phone number
+        int day_admit;                    // Student's day of admission
+        int month_admit;                  // Student's month of admission
+        int year_admit;                   // Student's year of admission
+        School _school;                   // Student's declared school
+        bool is_full_time;                // Student's full time status
+        double units_completed;           // Student's number of completed units
 
 
-    public:
+    public:                             // default constructor for Student
         Student();                      // explicitly call Person() on implementation
         Student(const Student& other);  // call Person(other) on implementation
         Student(int urid, std::string netid, std::string lname, std::string fname,
@@ -40,24 +40,23 @@ class Student : public Person
                double units_completed);
         ~Student();
 
-        std::list<std::string> getCourses();
-        void                   addCourse(std::string course);
-        void                   removeCourse(std::string course);
-        void                   printCourses();
-        void                   setCourses(std::list<std::string> courses);
-        void                   clearCourses();
+        std::list<std::string> getCourses();                                  // gets Student's courses
+        void                   addCourse(std::string course);                 // adds a Student's course
+        void                   removeCourse(std::string course);              // removes a Student's _course
+        void                   printCourses();                                // prints a Student's course
+        void                   setCourses(std::list<std::string> courses);    // sets a Student's courses
+        void                   clearCourses();                                // clears a Student's courses
+        struct tm              getAdmitDate();                                // struct for Student's admit date
+        School                 getSchool();                                   // gets Student's school
+        double                 getGPA();                                      // gets Student's GPA
+        double                 getUnitsCompleted();                           // gets Student's number of units completed
+        bool                   isFullTime();                                  // gets Student's full time status
 
-        struct tm              getAdmitDate();
-        School                 getSchool();
-        double                 getGPA();
-        double                 getUnitsCompleted();
-        bool                   isFullTime();
-
-        void setAdmitDate(int day, int month, int year);
-        void setSchool(School school);
-        void setGPA(double gpa);
-        void setUnitsCompleted(double units);
-        void setFullTimeStatus(bool isFullTime);
+        void setAdmitDate(int day, int month, int year);                      // sets Student's admit date
+        void setSchool(School school);                                        // sets Student's school
+        void setGPA(double gpa);                                              // sets Student's GPA
+        void setUnitsCompleted(double units);                                 // sets Student' units completed
+        void setFullTimeStatus(bool isFullTime);                              // sets Student's full time status
 };
 
 #endif
