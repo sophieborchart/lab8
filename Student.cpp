@@ -17,21 +17,25 @@ Student::Student(int urid, std::string netid, std::string lname, std::string fna
 	std::string email, std::string address, long phone,
 	int day_admit, int month_admit, int year_admit,
 	School school, bool is_full_time,
-	double units_completed):Person() {
+	double units_completed):Person()
+{
 
 }
 
 Student::~Student() {}
 
-std::list<std::string> Student::getCourses() {
+std::list<std::string> Student::getCourses()
+{
 	return _courses;
 }
 
-void Student::addCourse(std::string course) {
+void Student::addCourse(std::string course)
+{
 	_courses.push_back(course);
 }
 
-void Student::removeCourse(std::string course) {
+void Student::removeCourse(std::string course)
+{
 	_courses.remove(course);
 }
 
@@ -39,7 +43,7 @@ void Student::printCourses()
 {
 	std::list<std::string>::iterator it;
 	for(it = _courses.begin(); it != _courses.end(); ++it)
-		std::cout << *it << endl;
+		std::cout << *it << ", ";
 }
 
 void Student::setCourses(std::list<std::string> courses)

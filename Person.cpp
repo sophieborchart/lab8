@@ -13,7 +13,7 @@ Person::Person()
   fname = "";
   dob_day = 0;
   dob_month = 0;
-  dob_year = 0;
+  dob_year = -1900;
   email = "";
   address = "";
   phone = -1;
