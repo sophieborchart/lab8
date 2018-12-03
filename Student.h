@@ -40,6 +40,7 @@ class Student : public Person
                int day_admit, int month_admit, int year_admit,
                School school, bool is_full_time,
                double units_completed);
+
         ~Student();
 
         std::list<std::string> getCourses();                                  // gets Student's courses

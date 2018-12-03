@@ -50,18 +50,6 @@ int main() {
 	cout << "\t" << p3.getPhone() << " [Expected: 911]" << endl;
 	cout << "-------------------------------------------" << endl;
 
-	cout << "Test: " << endl;
-	Student s2(12345, "qwerty", "Brown", "John", 4, 8, 1999-1900, "x@x.com", "123 Maple Ln", 12345678, 1, 1, 2017-1900, Student::AS, false, 23.5);
-	cout << "\t" << "Student s2(12345, \"qwerty\", \"Brown\", \"John\", 4, 8, 1999-1900, \"x@x.com\", \123 Maple Ln\", 12345678, 1, 1, 2017-1900, Student::AS, false, 23.5)" << endl;
-	cout << endl << "Output: " << endl;
-	cout << "\t" << s2.getAdmitDate().tm_mon << "/" << s2.getAdmitDate().tm_mday << "/"
-			 << s2.getAdmitDate().tm_year + 1900 << " [Expected: 1/1/2017]" << endl;
-  cout << "\t" << s2.getSchool() << " [Expected: 0]" << endl;
-  cout << "\t" << s2.getUnitsCompleted() << " [Expected: 23.5]" << endl;
-	cout << "\t" << s2.getSchool() << " [Expected: 0]" << endl;
-	cout << "\t" << s2.isFullTime() << " [Expected: 0]" << endl;
-
-	cout << "-------------------------------------------" << endl;
 
 	cout << "Testing Person setters/getters:" << endl;
 
@@ -71,7 +59,7 @@ int main() {
 	cout << "\t" << "p.setFirstName(\"Sophie\")" << endl;
 
 	cout << "Output: " << endl;
-  p.setFirstName("Sophie");
+  	p.setFirstName("Sophie");
 
 	cout << "\t" << p.getFirstName() << " [Expected: Sophie]" << endl;
 
@@ -136,9 +124,69 @@ int main() {
 	cout << "-------------------------------------------" << endl;
 
 
+
+
+
+
+
+
+
+
 	cout << "Student s; " << endl;
 
 	cout << "-------------------------------------------" << endl;
+
+	cout << "Testing Constructors:" << endl;
+
+	cout << "-------------------------------------------" << endl;
+
+
+	cout << "Test: " << endl;
+	Student s2(12345678, "netid1", "lname", "fname", 11, 11, 11, "xyz@richmond.edu", "123 lane", 1230987655, 21, 10, 11, Student::JSLS, true, 12.5);
+	cout << "\t" << "Student s2(123, \"netid1\", \"lname\", \"fname\", 11, 11, 11, \"xyz@richmond.edu\", \"123 lane\", \"1230987655\", 21, 10, 11, Student::JSLS, true, 12.5)" << endl;
+	cout << endl << "Output: " << endl;
+	cout << "\t" << s2.getFirstName() << " [Expected: fnaolol]" << endl;
+	cout << "\t" << s2.getLastName() << " [Expected: lname]" << endl;
+	cout << "\t" << s2.getAddress() << " [Expected: 37ydjk]" << endl;
+	cout << "\t" << s2.getNetID() << " [Expected: netid]" << endl;
+	cout << "\t" << s2.getURID() << " [Expected: 123]" << endl;
+	cout << "\t" << s2.getDateOfBirth().tm_mon << "/" << p2.getDateOfBirth().tm_mday << "/"
+			 << s2.getDateOfBirth().tm_year + 1900 << " [Expected: 33/22/1901]" << endl;
+	cout << "\t" << s2.getEmail() << " [Expected: do@wd.edu]" << endl;
+	cout << "\t" << s2.getPhone() << " [Expected: 911]" << endl;
+	cout << "\t" << s2.getAdmitDate().tm_mon << "/" << s2.getAdmitDate().tm_mday << "/"
+			 << s2.getAdmitDate().tm_year + 1900 << " [Expected: 11/11/2011]" << endl;
+	cout << "\t" << s2.getSchool() << " [Expected: JSLS]" << endl;
+	cout << "\t" << s2.isFullTime() << " [Expected: true]" << endl;
+	cout << "\t" << s2.getUnitsCompleted() << " [Expected: 12.5]" << endl;
+
+
+
+	cout << "-------------------------------------------" << endl;
+
+	Student s3(s2);
+	cout << "Test: " << endl;
+	cout << "\t" << "Student s3(s2)" << endl;
+	cout << endl << "Output: " << endl;
+	cout << "\t" << s3.getFirstName() << " [Expected: fnaolol]" << endl;
+	cout << "\t" << s3.getLastName() << " [Expected: lname]" << endl;
+	cout << "\t" << s3.getAddress() << " [Expected: 37ydjk]" << endl;
+	cout << "\t" << s3.getNetID() << " [Expected: netid]" << endl;
+	cout << "\t" << s3.getURID() << " [Expected: 123]" << endl;
+	cout << "\t" << s3.getDateOfBirth().tm_mon << "/" << p2.getDateOfBirth().tm_mday << "/"
+			 << s3.getDateOfBirth().tm_year + 1900 << " [Expected: 33/22/1901]" << endl;
+	cout << "\t" << s3.getEmail() << " [Expected: do@wd.edu]" << endl;
+	cout << "\t" << s3.getPhone() << " [Expected: 911]" << endl;
+	cout << "\t" << s3.getAdmitDate().tm_mon << "/" << s3.getAdmitDate().tm_mday << "/"
+			 << s3.getAdmitDate().tm_year + 1900 << " [Expected: 11/11/2011]" << endl;	cout << "\t" << s3.getSchool() << " [Expected: JSLS]" << endl;
+	cout << "\t" << s3.isFullTime() << " [Expected: true]" << endl;
+	cout << "\t" << s3.getUnitsCompleted() << " [Expected: 12.5]" << endl;
+
+
+
+
+	cout << "-------------------------------------------" << endl;
+
 
 	cout << "Testing Student setters/getters:" << endl;
 
@@ -158,7 +206,7 @@ int main() {
 
 	cout << "Test: " << endl;
 	cout << "\t" << "s.removeCourse(\"CMSC 240\")" << endl;
-  s.removeCourse("CMSC 240");
+  	s.removeCourse("CMSC 240");
 	testCourses = s.getCourses();
 	cout << "Output: " << endl;
 	s.printCourses();
