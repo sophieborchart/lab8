@@ -125,7 +125,7 @@ struct tm Student::getAdmitDate()
 	struct tm admitInformation;
 	admitInformation.tm_mday = day_admit;
 	admitInformation.tm_mon = month_admit;
-	admitInformation.tm_year = year_admit;
+	admitInformation.tm_year = year_admit - 1900;
 	return admitInformation;
 }
 
@@ -157,7 +157,7 @@ void Student::setAdmitDate(int day, int month, int year)
 {
 	day_admit = day;
 	month_admit = month;
-	year_admit = year;
+	year_admit = year + 1900;
 }
 
 // sets Student's school

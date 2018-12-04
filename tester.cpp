@@ -6,10 +6,6 @@
 using namespace std;
 
 
-
-//might need to fix DOB/admit dates because 1900 is messing it up
-
-
 int main() {
 
 	Person p;
@@ -21,6 +17,8 @@ int main() {
 	cout << "Testing Constructors:" << endl;
 
 	cout << "-------------------------------------------" << endl;
+
+	///DATES ARE WRONG!!!!!!!
 
 	cout << "Test: " << endl;
 	Person p2(123, "netid", "lname", "fnaolol", 22, 33, 1, "do@wd.edu", "37ydjk", 911);
@@ -48,7 +46,7 @@ int main() {
 	cout << "\t" << p3.getNetID() << " [Expected: netid]" << endl;
 	cout << "\t" << p3.getURID() << " [Expected: 123]" << endl;
 	cout << "\t" << p3.getDateOfBirth().tm_mon << "/" << p3.getDateOfBirth().tm_mday << "/"
-			 << p3.getDateOfBirth().tm_year + 1900 << " [Expected: 33/22/1901]" << endl;
+			 << p3.getDateOfBirth().tm_year << " [Expected: 33/22/1901]" << endl;
 	cout << "\t" << p3.getEmail() << " [Expected: do@wd.edu]" << endl;
 	cout << "\t" << p3.getPhone() << " [Expected: 911]" << endl;
 	cout << "-------------------------------------------" << endl;
@@ -77,12 +75,12 @@ int main() {
 	cout << "-------------------------------------------" << endl;
 
 	cout << "Test: " << endl;
-	cout << "\t" << "p.setDateOfBirth(24, 7, (1998-1900))" << endl;
-	p.setDateOfBirth(24, 7, (1998-1900));
+	cout << "\t" << "p.setDateOfBirth(24, 7, 1998" << endl;
+	p.setDateOfBirth(24, 7, 1998);
 
 	cout << "Output: " << endl;
 	cout << "\t" << p.getDateOfBirth().tm_mon << "/" << p.getDateOfBirth().tm_mday << "/"
-			 << p.getDateOfBirth().tm_year + 1900 << " [Expected: 7/24/1998]" << endl;
+			 << p.getDateOfBirth().tm_year << " [Expected: 7/24/1998]" << endl;
 
 	cout << "-------------------------------------------" << endl;
 
@@ -128,11 +126,6 @@ int main() {
 
 
 
-
-
-
-
-
 	Student s;
 
 	cout << "Student s; " << endl;
@@ -148,17 +141,17 @@ int main() {
 	Student s2(12345678, "netid1", "lname", "fname", 11, 11, 11, "xyz@richmond.edu", "123 lane", 1230987655, 21, 10, 11, Student::JSLS, true, 12.5);
 	cout << "\t" << "Student s2(123, \"netid1\", \"lname\", \"fname\", 11, 11, 11, \"xyz@richmond.edu\", \"123 lane\", \"1230987655\", 21, 10, 11, Student::JSLS, true, 12.5)" << endl;
 	cout << endl << "Output: " << endl;
-	cout << "\t" << s2.getFirstName() << " [Expected: fnaolol]" << endl;
-	cout << "\t" << s2.getLastName() << " [Expected: lname]" << endl;
-	cout << "\t" << s2.getAddress() << " [Expected: 37ydjk]" << endl;
-	cout << "\t" << s2.getNetID() << " [Expected: netid]" << endl;
-	cout << "\t" << s2.getURID() << " [Expected: 123]" << endl;
-	cout << "\t" << s2.getDateOfBirth().tm_mon << "/" << p2.getDateOfBirth().tm_mday << "/"
-			 << s2.getDateOfBirth().tm_year + 1900 << " [Expected: 33/22/1901]" << endl;
-	cout << "\t" << s2.getEmail() << " [Expected: do@wd.edu]" << endl;
-	cout << "\t" << s2.getPhone() << " [Expected: 911]" << endl;
+	// cout << "\t" << s2.getFirstName() << " [Expected: fname]" << endl;
+	// cout << "\t" << s2.getLastName() << " [Expected: lname]" << endl;
+	// cout << "\t" << s2.getAddress() << " [Expected: 123 lane]" << endl;
+	// cout << "\t" << s2.getNetID() << " [Expected: netid1]" << endl;
+	// cout << "\t" << s2.getURID() << " [Expected: 12345678]" << endl;
+	 cout << "\t" << s2.getDateOfBirth().tm_mon << "/" << s2.getDateOfBirth().tm_mday << "/"
+	 		 << s2.getDateOfBirth().tm_year << " [Expected: 11/11/1911]" << endl;
+	// cout << "\t" << s2.getEmail() << " [Expected: xyz@richmond.edu]" << endl;
+	// cout << "\t" << s2.getPhone() << " [Expected: 1230987655]" << endl;
 	cout << "\t" << s2.getAdmitDate().tm_mon << "/" << s2.getAdmitDate().tm_mday << "/"
-			 << s2.getAdmitDate().tm_year + 1900 << " [Expected: 11/11/1911]" << endl;
+			 << s2.getAdmitDate().tm_year << " [Expected: 10/21/1911]" << endl;
 	cout << "\t" << s2.getSchool() << " [Expected: 1]" << endl;
 	cout << "\t" << s2.isFullTime() << " [Expected: 1]" << endl;
 	cout << "\t" << s2.getUnitsCompleted() << " [Expected: 12.5]" << endl;
@@ -171,21 +164,20 @@ int main() {
 	cout << "Test: " << endl;
 	cout << "\t" << "Student s3(s2)" << endl;
 	cout << endl << "Output: " << endl;
-	cout << "\t" << s3.getFirstName() << " [Expected: fnaolol]" << endl;
-	cout << "\t" << s3.getLastName() << " [Expected: lname]" << endl;
-	cout << "\t" << s3.getAddress() << " [Expected: 37ydjk]" << endl;
-	cout << "\t" << s3.getNetID() << " [Expected: netid]" << endl;
-	cout << "\t" << s3.getURID() << " [Expected: 123]" << endl;
-	cout << "\t" << s3.getDateOfBirth().tm_mon << "/" << p2.getDateOfBirth().tm_mday << "/"
-			 << s3.getDateOfBirth().tm_year + 1900 << " [Expected: 33/22/1901]" << endl;
-	cout << "\t" << s3.getEmail() << " [Expected: do@wd.edu]" << endl;
-	cout << "\t" << s3.getPhone() << " [Expected: 911]" << endl;
+	// cout << "\t" << s3.getFirstName() << " [Expected: fname]" << endl;
+	// cout << "\t" << s3.getLastName() << " [Expected: lname]" << endl;
+	// cout << "\t" << s3.getAddress() << " [Expected: 123 lane]" << endl;
+	// cout << "\t" << s3.getNetID() << " [Expected: netid1]" << endl;
+	// cout << "\t" << s3.getURID() << " [Expected: 12345678]" << endl;
+	// cout << "\t" << s3.getDateOfBirth().tm_mon << "/" << s3.getDateOfBirth().tm_mday << "/"
+	// 		 << s3.getDateOfBirth().tm_year << " [Expected: 11/11/11]" << endl;
+	// cout << "\t" << s3.getEmail() << " [Expected: xyz@richmond.edu]" << endl;
+	// cout << "\t" << s3.getPhone() << " [Expected: 1230987655]" << endl;
 	cout << "\t" << s3.getAdmitDate().tm_mon << "/" << s3.getAdmitDate().tm_mday << "/"
-			 << s3.getAdmitDate().tm_year + 1900 << " [Expected: 10/21/1911]" << endl;	cout << "\t" << s3.getSchool() << " [Expected: 1]" << endl;
+			 << s3.getAdmitDate().tm_year << " [Expected: 10/21/1911]" << endl;
+	cout << "\t" << s3.getSchool() << " [Expected: 1]" << endl;
 	cout << "\t" << s3.isFullTime() << " [Expected: 1]" << endl;
 	cout << "\t" << s3.getUnitsCompleted() << " [Expected: 12.5]" << endl;
-
-
 
 
 	cout << "-------------------------------------------" << endl;
@@ -254,10 +246,10 @@ int main() {
 
 	cout << "Test: " << endl;
 	cout << "\t" << "s.setAdmitDate(\"2/24/2017\")" << endl;
-    s.setAdmitDate(24, 2, 2017-1900);
+    s.setAdmitDate(24, 2, 2017);
 	cout << "Output: " << endl;
 	cout << "\t" << s.getAdmitDate().tm_mon << "/" << s.getAdmitDate().tm_mday << "/"
-			 << s.getAdmitDate().tm_year + 1900 << " [Expected: 2/24/2017]" << endl;
+			 << s.getAdmitDate().tm_year << " [Expected: 2/24/2017]" << endl;
 
 	cout << "-------------------------------------------" << endl;
 

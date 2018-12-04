@@ -16,7 +16,7 @@ Person::Person()
   fname = "";
   dob_day = 0;
   dob_month = 0;
-  dob_year = -1900;
+  dob_year = -1;
   email = "";
   address = "";
   phone = -1;
@@ -75,7 +75,7 @@ struct tm Person::getDateOfBirth()
   struct tm birthInformation;
   birthInformation.tm_mday = dob_day;
   birthInformation.tm_mon = dob_month;
-  birthInformation.tm_year = dob_year;
+  birthInformation.tm_year = dob_year - 1900;
   return birthInformation;
 }
 
@@ -126,7 +126,7 @@ void Person::setDateOfBirth(int day, int month, int year)
 {
   this->dob_day = day;
   this->dob_month = month;
-  this->dob_year = year;
+  this->dob_year = year + 1900;
 }
 
 void Person::setAddress(std::string address)
