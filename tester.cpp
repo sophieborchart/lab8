@@ -13,7 +13,6 @@ using namespace std;
 int main() {
 
 	Person p;
-	Student s;
 	cout << p.getFirstName() << endl;
 	cout << "Person p;" << endl;
 
@@ -134,7 +133,7 @@ int main() {
 
 
 
-
+	Student s;
 
 	cout << "Student s; " << endl;
 
