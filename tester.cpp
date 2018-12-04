@@ -158,9 +158,9 @@ int main() {
 	cout << "\t" << s2.getEmail() << " [Expected: do@wd.edu]" << endl;
 	cout << "\t" << s2.getPhone() << " [Expected: 911]" << endl;
 	cout << "\t" << s2.getAdmitDate().tm_mon << "/" << s2.getAdmitDate().tm_mday << "/"
-			 << s2.getAdmitDate().tm_year + 1900 << " [Expected: 11/11/2011]" << endl;
-	cout << "\t" << s2.getSchool() << " [Expected: JSLS]" << endl;
-	cout << "\t" << s2.isFullTime() << " [Expected: true]" << endl;
+			 << s2.getAdmitDate().tm_year + 1900 << " [Expected: 11/11/1911]" << endl;
+	cout << "\t" << s2.getSchool() << " [Expected: 1]" << endl;
+	cout << "\t" << s2.isFullTime() << " [Expected: 1]" << endl;
 	cout << "\t" << s2.getUnitsCompleted() << " [Expected: 12.5]" << endl;
 
 
@@ -181,8 +181,8 @@ int main() {
 	cout << "\t" << s3.getEmail() << " [Expected: do@wd.edu]" << endl;
 	cout << "\t" << s3.getPhone() << " [Expected: 911]" << endl;
 	cout << "\t" << s3.getAdmitDate().tm_mon << "/" << s3.getAdmitDate().tm_mday << "/"
-			 << s3.getAdmitDate().tm_year + 1900 << " [Expected: 11/11/2011]" << endl;	cout << "\t" << s3.getSchool() << " [Expected: JSLS]" << endl;
-	cout << "\t" << s3.isFullTime() << " [Expected: true]" << endl;
+			 << s3.getAdmitDate().tm_year + 1900 << " [Expected: 10/21/1911]" << endl;	cout << "\t" << s3.getSchool() << " [Expected: 1]" << endl;
+	cout << "\t" << s3.isFullTime() << " [Expected: 1]" << endl;
 	cout << "\t" << s3.getUnitsCompleted() << " [Expected: 12.5]" << endl;
 
 
