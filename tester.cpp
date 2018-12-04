@@ -6,6 +6,10 @@
 using namespace std;
 
 
+
+//might need to fix DOB/admit dates because 1900 is messing it up
+
+
 int main() {
 
 	Person p;
@@ -29,7 +33,7 @@ int main() {
 	cout << "\t" << p2.getNetID() << " [Expected: netid]" << endl;
 	cout << "\t" << p2.getURID() << " [Expected: 123]" << endl;
 	cout << "\t" << p2.getDateOfBirth().tm_mon << "/" << p2.getDateOfBirth().tm_mday << "/"
-			 << p2.getDateOfBirth().tm_year + 1900 << " [Expected: 33/22/1901]" << endl;
+			 << p2.getDateOfBirth().tm_year << " [Expected: 33/22/1901]" << endl;
 	cout << "\t" << p2.getEmail() << " [Expected: do@wd.edu]" << endl;
 	cout << "\t" << p2.getPhone() << " [Expected: 911]" << endl;
 

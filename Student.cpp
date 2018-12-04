@@ -31,6 +31,28 @@ Student::Student()
 	units_completed = -1;
 }
 
+Student::Student(const Student& other)
+// copy constructor for Student
+{
+	urid = other.urid;
+	netid = other.netid;
+	lname = other.lname;
+	fname = other.fname;
+	dob_day = other.dob_day;
+	month_admit = other.month_admit;
+	dob_year = other.dob_year;
+	email = other.email;
+	address = other.address;
+	phone = other.phone;
+	day_admit = other.day_admit;
+	month_admit = other.month_admit;
+	year_admit = other.year_admit;
+	_school = other._school;
+	is_full_time = other.is_full_time;
+	units_completed = other.units_completed;
+}
+
+
 // constructor for Person with instance variables as parameters
 
 Student::Student(int urid, std::string netid, std::string lname, std::string fname,

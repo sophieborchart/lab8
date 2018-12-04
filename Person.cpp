@@ -23,7 +23,7 @@ Person::Person()
 }
 
 Person::Person(const Person& other)
-// constructor for Person which takes another Person as input
+// copy constructor for Person
 {
   urid = other.urid;
   netid = other.netid;
