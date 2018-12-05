@@ -48,7 +48,7 @@ Person::Person(int urid, std::string netid, std::string lname, std::string fname
   this->fname = fname;
   this->dob_day = dob_day;
   this->dob_month = dob_month;
-  this->dob_year = dob_year;
+  this->dob_year = dob_year + 1900;
   this->email = email;
   this->address = address;
   this->phone = phone;

@@ -68,7 +68,7 @@ Student::Student(int urid, std::string netid, std::string lname, std::string fna
 	this->fname = fname;
 	this->dob_day = dob_day;
 	this->dob_month = dob_mo;
-	this->dob_year = dob_yr;
+	this->dob_year = dob_yr + 1900;
 	this->email = email;
 	this->address = address;
 	this->phone = phone;
@@ -125,7 +125,7 @@ struct tm Student::getAdmitDate()
 	struct tm admitInformation;
 	admitInformation.tm_mday = day_admit;
 	admitInformation.tm_mon = month_admit;
-	admitInformation.tm_year = year_admit - 1900;
+	admitInformation.tm_year = year_admit;
 	return admitInformation;
 }
 
@@ -157,7 +157,7 @@ void Student::setAdmitDate(int day, int month, int year)
 {
 	day_admit = day;
 	month_admit = month;
-	year_admit = year + 1900;
+	year_admit = year;
 }
 
 // sets Student's school
