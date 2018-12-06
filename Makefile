@@ -1,11 +1,11 @@
-EXECS = tester
-OBJS = tester.cpp Person.cpp Student.cpp
+EXECS = Tester
+OBJS = Tester.cpp Person.cpp Student.cpp
 CC = g++
 CCFLAGS = -Wall -Wno-deprecated -Werror=return-type -g
 
 all: $(EXECS)
 
-tester: $(OBJS)
+Tester: $(OBJS)
 	$(CC) $(CCFLAGS) $^ -o $@
 
 %.o: %.cpp *.h

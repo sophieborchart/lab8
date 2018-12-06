@@ -8,14 +8,12 @@
 
 class Student : public Person
 {
-    public:
+public:
         // outside of this file, access type as Student::School,
         // and particular schools as Student::AS for example
-        enum School {AS, JSLS, LAW, RSB, SPCS, UNDEFINED};
+    enum School {AS, JSLS, LAW, RSB, SPCS, UNDEFINED};
 
-    protected:
-        std::list<std::string> _courses;  // Student's courses
-        double _gpa;                      // Student's gpa
+protected:
         int urid;                         // Student's urid
         std::string netid;                // Student's netid
         std::string lname;                // Student's last name
@@ -23,23 +21,28 @@ class Student : public Person
         std::string email;                // Student's email
         std::string address;              // Student's address
         long phone;                       // Student's phone number
+        
         int day_admit;                    // Student's day of admission
         int month_admit;                  // Student's month of admission
         int year_admit;                   // Student's year of admission
-        School _school;                   // Student's declared school
+        School school;                   // Student's declared school
         bool is_full_time;                // Student's full time status
         double units_completed;           // Student's number of completed units
+        double gpa;                         // Student's gpa
+        std::list<std::string> courseList;  // Student's courses
+        
+
 
 
     public:                             // default constructor for Student
         Student();                      // explicitly call Person() on implementation
         Student(const Student& other);  // call Person(other) on implementation
         Student(int urid, std::string netid, std::string lname, std::string fname,
-               int dob_day, int dob_mo, int dob_yr,
-               std::string email, std::string address, long phone,
-               int day_admit, int month_admit, int year_admit,
-               School school, bool is_full_time,
-               double units_completed);
+         int dob_day, int dob_mo, int dob_yr,
+         std::string email, std::string address, long phone,
+         int day_admit, int month_admit, int year_admit,
+         School school, bool is_full_time,
+         double units_completed, double gpa, std::list<std::string> courseList);
 
         ~Student();
 
@@ -60,6 +63,6 @@ class Student : public Person
         void setGPA(double gpa);                                              // sets Student's GPA
         void setUnitsCompleted(double units);                                 // sets Student' units completed
         void setFullTimeStatus(bool isFullTime);                              // sets Student's full time status
-};
+    };
 
 #endif

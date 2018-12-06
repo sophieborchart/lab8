@@ -7,55 +7,24 @@
 #include <ctime>
 #include "Person.h"
 
-Person::Person()
-{
-// default constructor for Person
-  urid = -1;
-  netid = "";
-  lname = "";
-  fname = "";
-  dob_day = 0;
-  dob_month = 0;
-  dob_year = -1;
-  email = "";
-  address = "";
-  phone = -1;
-}
+Person::Person() : urid(0000), netid(" "), lname("xyz"), fname("abc"), dob_day(0), dob_month(1), dob_year(0), 
+email("x@y.edu"), address("x address"), phone(12345654){}
 
-Person::Person(const Person& other)
-// copy constructor for Person
-{
-  urid = other.urid;
-  netid = other.netid;
-  lname = other.lname;
-  fname = other.fname;
-  dob_day = other.dob_day;
-  dob_month = other.dob_month;
-  dob_year = other.dob_year;
-  email = other.email;
-  address = other.address;
-  phone = other.phone;
-}
-
-Person::Person(int urid, std::string netid, std::string lname, std::string fname,
-       int dob_day, int dob_month, int dob_year,
-       std::string email, std::string address, long phone)
-{
-// constructor for Person where the user inputs values for all instance variables
-  this->urid = urid;
-  this->netid = netid;
-  this->lname = lname;
-  this->fname = fname;
-  this->dob_day = dob_day;
-  this->dob_month = dob_month;
-  this->dob_year = dob_year + 1900;
-  this->email = email;
-  this->address = address;
-  this->phone = phone;
-}
 
 // destructor
 Person::~Person(){}
+
+Person::Person(const Person& other):
+urid(other.urid), netid(other.netid), lname(other.lname), fname(other.fname), dob_day(other.dob_day),
+dob_month(other.dob_month), dob_year(other.dob_year), email(other.email), address(other.address), phone(other.phone){}
+
+Person::Person(int urid, std::string netid, std::string lname, std::string fname, int dob_day, int dob_month, 
+  int dob_year, std::string email, std::string address, long phone):
+
+
+urid(urid), netid(netid), lname(lname), fname(fname), dob_day(dob_day), dob_month(dob_month), dob_year(dob_year),
+email(email), address(address), phone(phone){}
+
 
 std::string Person::getFirstName()
 // gets the first name

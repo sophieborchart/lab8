@@ -8,7 +8,7 @@
 
 class Person
 {
-    protected:
+protected:
         int urid;                 // the UR ID
         std::string netid;        // the netID
         std::string lname;        // the last name
@@ -29,8 +29,8 @@ class Person
         // constructor for Person where the user inputs values for all instance
         // variables
         Person(int urid, std::string netid, std::string lname, std::string fname,
-               int dob_day, int dob_month, int dob_year,
-               std::string email, std::string address, long phone);
+         int dob_day, int dob_month, int dob_year,
+         std::string email, std::string address, long phone);
         ~Person();                // destructor
 
         std::string  getFirstName();    // gets the first name
@@ -67,6 +67,6 @@ class Person
 
         // setter method for the phone number
         void setPhone(long number);
-};
+    };
 
 #endif

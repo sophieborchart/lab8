@@ -1,289 +1,149 @@
 // Names: Sophie Borchart and Matthew Johnson
 
-#include "Student.h"
-#include "Person.h"
 #include <iostream>
+#include "Person.h"
+#include "Student.h"
 using namespace std;
 
+int main(){
 
-int main() {
+	cout << "-----------------------------------------------------" << endl;
+	cout << "------------------Testing Person---------------------" << endl;
 
-	Person p;
-	cout << p.getFirstName() << endl;
+//Testing setFirstname()
+	cout << "Testing setters/getters:" << endl;
+	cout << "-----------------------------------------------------" << endl << endl;
 	cout << "Person p;" << endl;
+	Person p;
 
-	cout << "-------------------------------------------" << endl;
+	cout << "First Name Before: " << p. getFirstName() << endl << endl;
+	cout << "After setting first name to Sophie" << endl;
+	p.setFirstName("Sophie");
+	cout << "First Name: " << p.getFirstName() << " **** " << "[Expected: Sophie]" << endl << endl;
 
-	cout << "Testing Constructors:" << endl;
+	cout << "------------------------------------------" << endl << endl;
 
-	cout << "-------------------------------------------" << endl;
-
-	///DATES ARE WRONG!!!!!!!
-
-	cout << "Test: " << endl;
-	Person p2(123, "netid", "lname", "fnaolol", 22, 33, 1901, "do@wd.edu", "37ydjk", 911);
-	cout << "\t" << "Person p2(123, \"netid\", \"lname\", \"fnaolol\", 22, 33, 1901, \"do@wd.edu\", \"37ydjk\", 911)" << endl;
-	cout << endl << "Output: " << endl;
-	cout << "\t" << p2.getFirstName() << " [Expected: fnaolol]" << endl;
-	cout << "\t" << p2.getLastName() << " [Expected: lname]" << endl;
-	cout << "\t" << p2.getAddress() << " [Expected: 37ydjk]" << endl;
-	cout << "\t" << p2.getNetID() << " [Expected: netid]" << endl;
-	cout << "\t" << p2.getURID() << " [Expected: 123]" << endl;
-	cout << "\t" << p2.getDateOfBirth().tm_mon << "/" << p2.getDateOfBirth().tm_mday << "/"
-			 << p2.getDateOfBirth().tm_year << " [Expected: 33/22/1901]" << endl;
-	cout << "\t" << p2.getEmail() << " [Expected: do@wd.edu]" << endl;
-	cout << "\t" << p2.getPhone() << " [Expected: 911]" << endl;
-
-	cout << "-------------------------------------------" << endl;
-
-	Person p3(p2);
-	cout << "Test: " << endl;
-	cout << "\t" << "Person p3(p2)" << endl;
-	cout << endl << "Output: " << endl;
-	cout << "\t" << p3.getFirstName() << " [Expected: fnaolol]" << endl;
-	cout << "\t" << p3.getLastName() << " [Expected: lname]" << endl;
-	cout << "\t" << p3.getAddress() << " [Expected: 37ydjk]" << endl;
-	cout << "\t" << p3.getNetID() << " [Expected: netid]" << endl;
-	cout << "\t" << p3.getURID() << " [Expected: 123]" << endl;
-	cout << "\t" << p3.getDateOfBirth().tm_mon << "/" << p3.getDateOfBirth().tm_mday << "/"
-			 << p3.getDateOfBirth().tm_year << " [Expected: 33/22/1901]" << endl;
-	cout << "\t" << p3.getEmail() << " [Expected: do@wd.edu]" << endl;
-	cout << "\t" << p3.getPhone() << " [Expected: 911]" << endl;
-	cout << "-------------------------------------------" << endl;
-
-
-	cout << "Testing Person setters/getters:" << endl;
-
-	cout << "-------------------------------------------" << endl;
-
-	cout << "Test: " << endl;
-	cout << "\t" << "p.setFirstName(\"Sophie\")" << endl;
-
-	cout << "Output: " << endl;
-  	p.setFirstName("Sophie");
-
-	cout << "\t" << p.getFirstName() << " [Expected: Sophie]" << endl;
-
-	cout << "-------------------------------------------" << endl;
-
-	cout << "Test: " << endl;
+//Testing setLastname()
+	cout << "Last Name Before: " << p. getLastName() << endl << endl;
+	cout << "After setting last name to Borchart" << endl;
 	p.setLastName("Borchart");
-	cout << "\t" << "p.setLastName(\"Borchart\")" << endl;
-	cout << "Output: " << endl;
-	cout << "\t" << p.getLastName() << " [Expected: Borchart]" << endl;
+	cout << "Last Name: " << p.getLastName() << " **** " << "[Expected: Borchart]" << endl << endl;
 
-	cout << "-------------------------------------------" << endl;
 
-	cout << "Test: " << endl;
-	cout << "\t" << "p.setDateOfBirth(24, 7, 1998)" << endl;
-	p.setDateOfBirth(24, 7, 1998);
+// Testing setDateOfBirth()
+	cout << "-----------------------------------------------------" << endl << endl;
+	cout << "p.setDateOfBirth(\"8-4-1999\")" << endl << endl;
 
-	cout << "Output: " << endl;
-	cout << "\t" << p.getDateOfBirth().tm_mon << "/" << p.getDateOfBirth().tm_mday << "/"
-			 << p.getDateOfBirth().tm_year << " [Expected: 7/24/1998]" << endl;
+	p.setDateOfBirth(4, 8, 1999);
+	cout << p.getDateOfBirth().tm_mon << "-" << p.getDateOfBirth().tm_mday << "-" 
+	<< p.getDateOfBirth().tm_year << " **** Expected[8-4-1999] " << endl;
 
-	cout << "-------------------------------------------" << endl;
+//Testing setAddress()
+	cout << "-----------------------------------------------------" << endl << endl;
+	cout << "Address Before: " << p.getAddress() << endl << endl;
+	cout << "Setting address to '5657 Angouleme Lane' " << endl << endl;
+	p.setAddress("5657 Angouleme Lane");
+	cout << "Address: " << p.getAddress() << " **** " << " [Expected: 5657 Angouleme Lane]" << endl << endl;
 
-	cout << "Test: " << endl;
-	cout << "\t" << "p.setAddress(\"28 Westhampton Way\")" << endl;
-	p.setAddress("28 Westhampton Way");
-	cout << "Output: " << endl;
-	cout << "\t" << p.getAddress() << " [Expected: 28 Westhampton Way]" << endl;
+//Testing setNetID()
+	cout << "-----------------------------------------------------" << endl << endl;
+	cout << "NetID Before: " << p.getNetID() << endl << endl;
 
-	cout << "-------------------------------------------" << endl;
-
-	cout << "Test: " << endl;
-	cout << "\t" << "p.setNetID(\"sb3jm\")" << endl;
+	cout << "Setting NetID to sb3jm " << endl;
 	p.setNetID("sb3jm");
-	cout << "Output: " << endl;
-	cout << "\t" << p.getNetID() << " [Expected: sb3jm]" << endl;
+	cout << "NetID: " << p.getNetID() << " ****  " << "[Expected: sb3jm]" << endl << endl;
 
-	cout << "-------------------------------------------" << endl;
+//Testing setURID()
+	cout << "-----------------------------------------------------" << endl << endl;
+	cout << "URID Before: " << p.getURID() << endl << endl;
 
-	cout << "Test: " << endl;
-	cout << "\t" << "p.setURID(12345678)" << endl;
-	p.setURID(12345678);
-	cout << "Output: " << endl;
-	cout << "\t" << p.getURID() << " [Expected: 12345678]" << endl;
+	cout << "Setting URID to 46744559 " << endl;
+	p.setURID(46744559);
+	cout << "URID: " << p.getURID() << " **** " << "[Expected: 46744559]" << endl << endl;
 
-	cout << "-------------------------------------------" << endl;
+//Testing setEmail()
+	cout << "-----------------------------------------------------" << endl << endl;
+	cout << "Email Before: " << p.getEmail() << endl << endl;
 
-	cout << "Test: " << endl;
-	cout << "\t" << "p.setEmail(\"sophie.borchart@richmond.edu\")" << endl;
-	p.setEmail("sophie.borchart@richmond.edu");
-	cout << "Output: " << endl;
-	cout << "\t" << p.getEmail() << " [Expected: sophie.borchart@richmond.edu]" << endl;
+	cout << "Setting email to 'sophie.borchart@gmail.com' " << endl;
+	p.setEmail("sophie.borchar@gmail.com");
+	cout << "Email: " << p.getEmail() << " **** " << "[Expected: sophie.borchart@gmail.com] " << endl << endl;
 
-	cout << "-------------------------------------------" << endl;
 
-	cout << "Test: " << endl;
-	cout << "\t" << "p.setPhone(8478571058)" << endl;
+//Testing setPhone()
+	cout << "-----------------------------------------------------" << endl << endl;
+	cout << "Phone Before: " << p.getPhone() << endl << endl;
+
+	cout << "Setting phone to 8478571058" << endl;
 	p.setPhone(8478571058);
-	cout << "Output: " << endl;
-	cout << "\t" << p.getPhone() << " [Expected: 8478571058]" << endl;
+	cout << "Phone: " << p.getPhone() << " **** " << "[Expected: 8478571058]" << endl << endl;
 
-	cout << "-------------------------------------------" << endl;
-
-
-
+//Testing Student()
+	cout << "-----------------------------------------------------" << endl;
+	cout << "------------------Testing Student--------------------" << endl;
+//Creating student
 	Student s;
 
-	cout << "Student s; " << endl;
+//Testing setAdmitDate() and getAdmitDate()
+	cout << "-----------------------------------------------------" << endl << endl;
+	cout << "s.setAdmitDate(\"5/5/2017\")" << endl;
+	s.setAdmitDate(5, 5, 2017);
+	cout << "Admit Date: " << s.getAdmitDate().tm_mday << "/" << s.getAdmitDate().tm_mon + 1 << "/" << s.getAdmitDate().tm_year + 1900
+	<< "  [Expected: 5/5/2017]" << endl;
 
-	cout << "-------------------------------------------" << endl;
+//Testing setSchool getSchool()
+	cout << "-----------------------------------------------------" << endl << endl;
+	cout << "School: " << s.getSchool() << "  [Expected: 2]" << endl;
+	cout << "s.setSchool(\"RSB\")" << endl;
+	s.setSchool(Student::RSB);
+	cout << "School: " << s.getSchool() << "  [Expected: 3]" << endl;
 
-	cout << "Testing Constructors:" << endl;
-
-	cout << "-------------------------------------------" << endl;
-
-
-	cout << "Test: " << endl;
-	Student s2(12345678, "netid1", "lname", "fname", 11, 11, 2011, "xyz@richmond.edu", "123 lane", 1230987655, 21, 10, 2011, Student::JSLS, true, 12.5);
-	cout << "\t" << "Student s2(12345678, \"netid1\", \"lname\", \"fname\", 11, 11, 2011, \"xyz@richmond.edu\", \"123 lane\", \"1230987655\", 21, 10, 2011, Student::JSLS, true, 12.5)" << endl;
-	cout << endl << "Output: " << endl;
-	// cout << "\t" << s2.getFirstName() << " [Expected: fname]" << endl;
-	// cout << "\t" << s2.getLastName() << " [Expected: lname]" << endl;
-	// cout << "\t" << s2.getAddress() << " [Expected: 123 lane]" << endl;
-	// cout << "\t" << s2.getNetID() << " [Expected: netid1]" << endl;
-	// cout << "\t" << s2.getURID() << " [Expected: 12345678]" << endl;
-	 cout << "\t" << s2.getDateOfBirth().tm_mon << "/" << s2.getDateOfBirth().tm_mday << "/"
-	 		 << s2.getDateOfBirth().tm_year << " [Expected: 11/11/2011]" << endl;
-	// cout << "\t" << s2.getEmail() << " [Expected: xyz@richmond.edu]" << endl;
-	// cout << "\t" << s2.getPhone() << " [Expected: 1230987655]" << endl;
-	cout << "\t" << s2.getAdmitDate().tm_mon << "/" << s2.getAdmitDate().tm_mday << "/"
-			 << s2.getAdmitDate().tm_year << " [Expected: 10/21/2011]" << endl;
-	cout << "\t" << s2.getSchool() << " [Expected: 1]" << endl;
-	cout << "\t" << s2.isFullTime() << " [Expected: 1]" << endl;
-	cout << "\t" << s2.getUnitsCompleted() << " [Expected: 12.5]" << endl;
-
-
-
-	cout << "-------------------------------------------" << endl;
-
-	Student s3(s2);
-	cout << "Test: " << endl;
-	cout << "\t" << "Student s3(s2)" << endl;
-	cout << endl << "Output: " << endl;
-	// cout << "\t" << s3.getFirstName() << " [Expected: fname]" << endl;
-	// cout << "\t" << s3.getLastName() << " [Expected: lname]" << endl;
-	// cout << "\t" << s3.getAddress() << " [Expected: 123 lane]" << endl;
-	// cout << "\t" << s3.getNetID() << " [Expected: netid1]" << endl;
-	// cout << "\t" << s3.getURID() << " [Expected: 12345678]" << endl;
-	// cout << "\t" << s3.getDateOfBirth().tm_mon << "/" << s3.getDateOfBirth().tm_mday << "/"
-	// 		 << s3.getDateOfBirth().tm_year << " [Expected: 11/11/11]" << endl;
-	// cout << "\t" << s3.getEmail() << " [Expected: xyz@richmond.edu]" << endl;
-	// cout << "\t" << s3.getPhone() << " [Expected: 1230987655]" << endl;
-	cout << "\t" << s3.getAdmitDate().tm_mon << "/" << s3.getAdmitDate().tm_mday << "/"
-			 << s3.getAdmitDate().tm_year << " [Expected: 10/21/2011]" << endl;
-	cout << "\t" << s3.getSchool() << " [Expected: 1]" << endl;
-	cout << "\t" << s3.isFullTime() << " [Expected: 1]" << endl;
-	cout << "\t" << s3.getUnitsCompleted() << " [Expected: 12.5]" << endl;
-
-
-	cout << "-------------------------------------------" << endl;
-
-
-	cout << "Testing Student setters/getters:" << endl;
-
-	cout << "-------------------------------------------" << endl;
-
-	cout << "Test: " << endl;
-	cout << "\t" << "s.addCourse(\"CMSC 240\")" << endl;
-	cout << "\t" << "s.addCourse(\"CMSC 222\")" << endl;
-    s.addCourse("CMSC 240");
-    s.addCourse("CMSC 222");
-	std::list<std::string> testCourses = s.getCourses();
-	cout << "Output: " << endl;
+//Testing addCourse(), removeCourse(), setCourses(), clearCourses(), and rintCourses()
+	cout << "-----------------------------------------------------" << endl << endl;
+	cout << "Courses: ";
 	s.printCourses();
-	cout << "\t" << "[Expected: CMSC 240, CMSC 222]" << endl;
-
-	cout << "-------------------------------------------" << endl;
-
-	cout << "Test: " << endl;
-	cout << "\t" << "s.removeCourse(\"CMSC 240\")" << endl;
-  	s.removeCourse("CMSC 240");
-	testCourses = s.getCourses();
-	cout << "Output: " << endl;
+	cout << "  [Expected: ""]" << endl;
+	cout << "s.addCourse(\"CMSC 222\") " << "s.addCourse(\"CMSC 240\")" << endl;
+	s.addCourse("CMSC 222");
+	s.addCourse("CMSC 240");
+	cout << "Courses: ";
 	s.printCourses();
-	cout << "\t" << "[Expected: CMSC 222]" << endl;
-
-	cout << "-------------------------------------------" << endl;
-
-	cout << "Test: " << endl;
-	cout << "\t" << "s.printCourses()" << endl;
-	cout << "Output: " << endl;
+	cout << "  [Expected: CMSC 222 CMSC 240]" << endl;
+	cout << "s.removeCourse(\"CMSC 222\")" << endl;
+	s.removeCourse("CMSC 222");
+	cout << "Courses: ";
 	s.printCourses();
-	cout << "\t" << "[Expected: CMSC 222]" << endl;
+	cout << "  [Expected: CMSC 240]" << endl;
+	cout << "Student x;" << endl;
+	Student x;
+	cout << "x.addCourse(\"PSYC 333\")" << endl;
+	x.addCourse("PSYC 333");
+	cout << "s.setCourses(x.getCourses())" << endl;
+	s.setCourses(x.getCourses());
+	cout << "Courses: ";
+	s.printCourses();
+	cout << "  [Expected: PSYC 333]" << endl;
+
+//Testing setGPA() and getGPA()
+	cout << "-----------------------------------------------------" << endl << endl;
+	cout << "GPA: " << s.getGPA() << "  [Expected: 0.0]" << endl;
+	cout << "s.setGPA(3.99)" << endl;
+	s.setGPA(3.99);
+	cout << "GPA: " << s.getGPA() << "  [Expected: 3.99]" << endl;
+
+//Testing setUnitsCompleted() and getUnitsCompleted()
+	cout << "-----------------------------------------------------" << endl << endl;
+	cout << "Units Completed: " << s.getUnitsCompleted() << "  [Expected: 0.0]" << endl;
+	cout << "s.setUnitsCompleted(11.5)" << endl;
+	s.setUnitsCompleted(11.5);
+	cout << "Units Completed: " << s.getUnitsCompleted() << "  [Expected: 11.5]" << endl;
+
+//Testing setFullTimeStatus() getFullTimeStatus()
+	cout << "-----------------------------------------------------" << endl << endl;
+	cout << "Full Time Status: " << s.isFullTime() << "  [Expected: 0]" << endl;
+	cout << "s.setFullTimeStatus(true)" << endl;
+	s.setFullTimeStatus(true);
+	cout << "Full Time Status: " << s.isFullTime() << "  [Expected: 1]" << endl;
 
 
-	cout << "-------------------------------------------" << endl;
-
-	cout << "Test: " << endl;
-	cout << "\t" << "std::list<std::string> test2Courses" << endl << "\t" <<
-		"test2Courses.push_back(\"CMSC 301\")" << endl << "\t" <<
-		"test2Courses.push_back(\"CMSC 315\")" << endl << "\t" <<
-		"test2Courses.push_back(\"MATH 245\")" << endl;
-	std::list<std::string> test2Courses;
-		test2Courses.push_back("CMSC 301");
-		test2Courses.push_back("CMSC 315");
-		test2Courses.push_back("MATH 245");
-    s.setCourses(test2Courses);
-		cout << "Output: " << endl;
-		s.printCourses();
-	cout << endl << "\t" << "[Expected: CMSC 301, CMSC 315, MATH 245]" << endl;
-
-	cout << "-------------------------------------------" << endl;
-
-	cout << "Test: " << endl;
-	cout << "\t" << "s.clearCourses()" << endl;
-    s.clearCourses();
-		cout << "Output: " << endl;
-		s.printCourses();
-		cout << endl;
-	cout << "\t" << "[Expected: ]" << endl;
-
-	cout << "-------------------------------------------" << endl;
-
-	cout << "Test: " << endl;
-	cout << "\t" << "s.setAdmitDate(\"2/24/2017\")" << endl;
-    s.setAdmitDate(24, 2, 2017);
-	cout << "Output: " << endl;
-	cout << "\t" << s.getAdmitDate().tm_mon << "/" << s.getAdmitDate().tm_mday << "/"
-			 << s.getAdmitDate().tm_year << " [Expected: 2/24/2017]" << endl;
-
-	cout << "-------------------------------------------" << endl;
-
-	cout << "Test: " << endl;
-	cout << "\t" << "s.setSchool(Student::JSLS)" << endl;
-	cout << "Output: " << endl;
-    s.setSchool(Student::JSLS);
-	cout << "\t" << s.getSchool() << " [1]" << endl;
-
-	cout << "-------------------------------------------" << endl;
-
-	cout << "Test: " << endl;
-	cout << "\t" << "s.setGPA(3.12)" << endl;
-    s.setGPA(3.12);
-	cout << "Output: " << endl;
-	cout << "\t" << s.getGPA() << " [Expected: 3.12]" << endl;
-
-	cout << "-------------------------------------------" << endl;
-
-	cout << "Test: " << endl;
-	cout << "\t" << "s.setUnitsCompleted(18.2)" << endl;
-    s.setUnitsCompleted(18.2);
-	cout << "Output: " << endl;
-	cout << "\t" << s.getUnitsCompleted() << " [Expected: 18.2]" << endl;
-
-	cout << "-------------------------------------------" << endl;
-
-	cout << "Test: " << endl;
-	cout << "\t" << "s.setFullTimeStatus(true)" << endl;
-    s.setFullTimeStatus(true);
-	cout << "Output: " << endl;
-	cout << "\t" << s.isFullTime() << " [Expected: 1]" << endl;
-
-	cout << "-------------------------------------------" << endl;
-
-	 return 0;
-}
+};
